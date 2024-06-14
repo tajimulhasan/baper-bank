@@ -4,6 +4,11 @@ document.getElementById('deposit-button').addEventListener('click', function(){
 const depositInput = document.getElementById('deposit-input');
 const newdepositAmount = depositInput.value;
 
+if(newdepositAmount === ''){
+  alert("Your deposit amount is empty");
+  return;
+}
+
 //update deposit total
 
 const depositTotal = document.getElementById('deposit-total');
@@ -38,6 +43,11 @@ document.getElementById('withdraw-button').addEventListener('click', function ()
   const withdrawInput = document.getElementById('withdraw-input');
 const withdrawAmountText = withdrawInput.value;
 const newWithdrawAmount = parseFloat(withdrawAmountText);
+
+if(withdrawAmountText === ''){
+  alert("Your withdrow amount is empty");
+  return;
+}
 
 
 //set withdraw total

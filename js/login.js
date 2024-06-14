@@ -10,7 +10,7 @@ if(userEmail == 'hudai@gmail.com' && userPassword == 'secret'){
     window.location.href = 'banking.html'
 }
 else{
-console.log('invalid user')
+confirm('invalid user')
 }
 });
 

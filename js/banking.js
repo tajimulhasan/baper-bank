@@ -19,9 +19,6 @@ depositTotal.innerText = newDepositTotalAmount;
 depositInput.value = '';
 
 
-
-
-
 //update account balance
 const  blalanceTotal = document.getElementById('balance-total');
 const  previousbalanceText = blalanceTotal.innerText;
@@ -60,6 +57,12 @@ withdrawTotal.innerText = newwithdrawTotalAmount;
  const blalanceTotal = document.getElementById('balance-total');
  const previousbalancetext = blalanceTotal.innerText;
 const previousBalanceTotal = parseFloat(previousbalancetext);
-const newBalanceTotal = previousBalanceTotal - newWithdrawAmount;
-blalanceTotal.innerText = newBalanceTotal;
+
+
+if(previousBalanceTotal < newWithdrawAmount){
+ alert("Insufficient balance");
+ return;
+}
+  const newBalanceTotal = previousBalanceTotal - newWithdrawAmount;
+  blalanceTotal.innerText = newBalanceTotal;
 });

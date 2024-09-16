@@ -6,7 +6,7 @@ const userEmail = emailField.value;
 const passwordField = document.getElementById('user-password');
 const userPassword = passwordField.value;
 
-if(userEmail == 'hudai@gmail.com' && userPassword == 'secret'){
+if(userEmail == 'default@gmail.com' && userPassword == 'bank'){
     window.location.href = 'banking.html'
 }
 else{
